@@ -10,6 +10,7 @@ $gray-light: #ABABAB;
 $gray-medium: #898989;
 $gray-dark: #5F5F5F;
 $highlight: #FFEC5C;
+$black: #000000;
 
 // FONTS
 $serif: "Noto Serif","Segoe UI","Helvetica Neue",Helvetica,Roboto,FreeSans,serif;
@@ -21,7 +22,7 @@ $code: Menlo,Monaco,"Courier New",monospace;
 // CUSTOM FONTS
 @import "partials/_fonts";
 
-// THRID PARTY
+// THIRD PARTY
 @import "vendor/normalize";
 @import "vendor/syntax";
 
@@ -134,22 +135,30 @@ a:visited {
     color: $gray-dark;
 }
 
+a:hover {
+    color: $black;
+
+    .color-arrow {
+        fill: $black;
+    }
+}
+
 .color-link {
     text-decoration: none;
-    color: $teal;
+    color: $gray-dark;
     font-family: $sans-serif;
     margin-right: 1.5em;
 }
 
 .color-link:visited {
-    color: $teal;
+    color: $gray-dark;
 }
 
 .color-link:hover {
-    color: $teal-darker;
+    color: $black;
 
     .color-arrow {
-        fill: $teal-darker;
+        fill: $black;
     }
 }
 
@@ -157,21 +166,22 @@ a:visited {
     margin-right: 0.75em;
     margin-bottom: 1em;
     line-height: 1.75em;
-    color: $gray-light;
+    color: $gray-dark;
+    //font-style: italic;
 }
 
 .tag:visited {
-    color: $gray-light;
+    color: $gray-dark;
 }
 
 .tag:hover {
-    color: $gray-medium;
+    color: $black;
 }
 
 // ARTICLE FORMATTING
 time {
     margin-right: 1.5em;
-    color: $gray-light;
+    color: $gray-dark;
 }
 
 hr {
@@ -195,7 +205,7 @@ mark {
 }
 
 blockquote {
-    border-left: 4px solid $gray-lightest;
+    border-left: 4px solid $teal;
     padding-left: 1.3em;
     margin-left: 0em;
     margin-top: 0em;
@@ -315,7 +325,7 @@ nav {
 
     a {
         text-decoration: none;
-        color: $teal;
+        color: $gray-dark;
         font-size: 0.95rem;
     }
 }
@@ -401,7 +411,7 @@ nav {
 
 .post-footer {
     font-size: 0.95rem;
-    color: $gray-light;
+    color: $gray-dark;
     border-bottom: 1px solid $gray-lightest;
     padding-bottom: 1.8em;
 }
@@ -414,11 +424,11 @@ nav {
 .page-footer {
     padding: 1.5em 0em 2em 0em;
     font-size: 0.95rem;
-    color: $gray-light;
+    color: $gray-dark;
 
     a {
         text-decoration: none;
-        color: $gray-light;
+        color: $gray-dark;
     }
 }
 
@@ -440,7 +450,11 @@ nav {
 .archives-list-item-date {
     width: 60px;
     margin-right: 0.25em;
-    color: $gray-light;
+    color: $gray-dark;
+}
+
+.archives-list-item-separator {
+    color: $gray-lightest;
 }
 
 // 404 PAGE
@@ -484,24 +498,29 @@ footer {
         display: inline-block;
         height: 2em;
         position: relative;
+        color: $gray-dark;
+    }
+
+    .social-icon>svg {
+        fill: $gray-dark;
     }
 
     .social-icon>svg:hover {
-        fill: $gray-medium;
+        fill: $black;
     }
 
     a {
         text-decoration: none;
         font-size: 0.95rem;
-        color: $gray-light;
+        color: $gray-dark;
     }
 
     a:visited {
-        color: $gray-light;
+        color: $gray-dark;
     }
 
     a:hover {
-        color: $gray-medium;
+        color: $black;
     }
 }
 
