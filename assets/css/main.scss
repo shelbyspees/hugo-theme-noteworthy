@@ -211,7 +211,7 @@ blockquote {
     margin-top: 0em;
 
     p {
-        margin-bottom: 0em;
+        //margin-bottom: 0em;
     }
 }
 
@@ -372,12 +372,14 @@ nav {
 // SHORTCODE CONTENT
 .twitter-tweet {
     font-family: $sans-serif !important;
-    border-left: 4px solid $teal !important;
+    //border-left: 4px solid $teal !important;
     color: $gray-dark !important;
     font-size: 1rem !important;
     font-style: italic !important;
     margin-left: 0em;
-    padding-left: 1.3em !important;
+    //padding-left: 1.3em !important;
+    margin-top: 1.5em!important;
+    margin-bottom: 1.5em!important;
 
     p {
         font-size: 1.1em;
