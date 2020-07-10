@@ -8,3 +8,14 @@ p img {
   width: 100%;
   height: auto;
 }
+
+.site-title {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.5em 0 1em;
+}
+
+.site-icon {
+  max-width: 70%;
+}

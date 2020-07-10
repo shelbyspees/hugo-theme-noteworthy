@@ -1,5 +1,7 @@
 <header>
     <div class="site-title">
+        <a href="{{ "/" | relLangURL }}"><img class="site-icon" src="/{{ .Site.Params.Icon }}" alt="Home"></a>
+        <br>
         <a href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a>
-    </div>  
+    </div>
 </header>
