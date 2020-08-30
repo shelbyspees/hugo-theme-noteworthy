@@ -1,21 +1,33 @@
 <footer class="page-footer">
     {{if not .Params.no_paginate }}
-        {{ if in .Section "notes" }}
-            {{with .NextInSection}}
-            <a href="{{ .RelPermalink }}">Prev</a>
-            {{end}}
-            {{ if and .NextInSection .PrevInSection }} | {{ end }}
+        {{ if in .Section "posts" }}
             {{with .PrevInSection}}
-            <a href="{{ .RelPermalink }}">Next</a>
+                <a href="{{ .RelPermalink }}">Older</a>
+                |
+            {{end}}
+            {{with .Parent}}
+                <strong>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </strong>
+            {{end}}
+            {{with .NextInSection}}
+                |
+                <a href="{{ .RelPermalink }}">Newer</a>
             {{end}}
         {{ else }}
-            {{with .PrevInSection}}
-            <a href="{{ .RelPermalink }}">Older</a>
-            {{end}}
-            {{ if and .NextInSection .PrevInSection }} | {{ end }}
             {{with .NextInSection}}
-            <a href="{{ .RelPermalink }}">Newer</a>
-        {{end}}
+                <a href="{{ .RelPermalink }}">Prev</a>
+                |
+            {{end}}
+            {{with .Parent}}
+                <strong>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </strong>
+            {{end}}
+            {{with .PrevInSection}}
+                |
+                <a href="{{ .RelPermalink }}">Next</a>
+            {{end}}
         {{ end }}
     {{ end }}
 </footer>
