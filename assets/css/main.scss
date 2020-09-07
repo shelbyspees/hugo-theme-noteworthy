@@ -25,14 +25,16 @@ $code: Menlo,Monaco,"Courier New",monospace;
 // THIRD PARTY
 @import "vendor/normalize";
 @import "vendor/syntax";
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
 
 /* STYLES ========================================================================== */
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 html {
